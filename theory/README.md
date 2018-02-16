@@ -10,6 +10,8 @@ both `antelope` and `antelopes`.)
     antelope rocks out
     antelopes rock out
 
+    *Regex - /antelop\w+/g*
+
 * Regex that matches either of:
 
     goat
@@ -19,6 +21,8 @@ both `antelope` and `antelopes`.)
 
     boat
 
+  *Regex - /(g|m)oa\w+/g*
+
 * Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
   is correct (e.g 33333-33-33 can match).
@@ -27,6 +31,8 @@ both `antelope` and `antelopes`.)
   1999-1-20
   1999-01-20
   812-2-10
+
+  *Regex /\d{4}\-(0?[1-9]|1[012])\-(0?[0-9]|[12][0-9]|3[01])*/g*
 
 ## State Machines
 
@@ -38,11 +44,15 @@ both `antelope` and `antelopes`.)
       ab*c+d?[ef]
 
   Remember the ε transition can be used to move between states without
-  consuming input. 
+  consuming input.
+
+  *See images folder for filename abcdef finite state image*
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
   cause state transitions.
+
+*See images folder for filename lion finite state image*
 
 * The VT-100 terminal (console) outputs text to the screen as it
   receives it over the wire. One exception is that when it receives an
@@ -64,6 +74,8 @@ both `antelope` and `antelopes`.)
 
   * Draw a state machine diagram for a VT-100 that can consume regular
     character sequences as well as the two above ESC sequences.
+
+    *See images folder for filename VT-100 finite state image*
 
 > If you're curious, [here are all the VT-100 escape
 > sequences](http://ascii-table.com/ansi-escape-sequences-vt-100.php).
