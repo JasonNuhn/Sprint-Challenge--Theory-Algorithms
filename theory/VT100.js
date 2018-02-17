@@ -17,9 +17,19 @@ var adjregex = pty.spawn('bash', [], {
   cwd: process.env.HOME,
   env: process.env
 });
+
+var boldregex = pty.spawn('bash', [], {
+  //name: 'xterm-color',
+  cwd: process.env.HOME,
+  env: process.env
+});
  
 term.on('adjregex', function(data) {
   console.log(adjregex);
+});
+
+term.on('boldregex', function(data) {
+  console.log(boldregex);
 });
  
 console.log(term.process);
